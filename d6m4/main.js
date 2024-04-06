@@ -29,14 +29,15 @@
 //     hobbies: ["sing", "dancing", "reading"],
 //     hobbies: ["sing", "dancing", "reading"],
 // }
-var a =1 , b =2 ;
-var result = "a" && "b" && "c" && "d" && "e" ;
 
-if(false) {
-    console.log("dung");
-}else {
-    console.log("khong dung");
-}
+// var a =1 , b =2 ;
+// var result = "a" && "b" && "c" && "d" && "e" ;
 
-console.log(result);
+// if(result) {
+//     console.log("dung");
+// }else {
+//     console.log("khong dung");
+// }
+
+// console.log(result);
 
