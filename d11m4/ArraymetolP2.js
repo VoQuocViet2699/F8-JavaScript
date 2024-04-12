@@ -127,6 +127,37 @@ var outArr = arr.reduce((a , b) => a.concat(b.source), [])
 console.log(outArr)
 
 //includes kiểm tra trong mảng hoặc chuổi có phần tử cần tìm hay không
-var str = "vo quoc viet"
-var search = str.includes('quoc')
-console.log(search.valueOf)
+//call back : bạn định nghĩa funcion và truyền nó vào đối số của 1 funcion khác
+function func(param) {
+    param('hello')
+} 
+function callbackFunc(value){
+    console.log(value)
+}
+func(callbackFunc)
+
+//Định nghĩa lại một funcion map và cách hoạt động của callback
+Array.prototype.map2 = function(callback) {
+    var arraylenght = this.length;
+    var outPut = [ ]
+    for(var i = 0; i < arraylenght; i++){
+        var result =  callback(this[i], i)
+        outPut.push(result)
+    }
+    return outPut
+}
+var learn = [
+    'Javascript',
+    'Java',
+    'Python',
+    'PHP',
+    'C++',
+    'C#'
+]
+
+var htmls =  learn.map2(function(learns, idx){
+    return `<h2>${learns}</h2>`
+})
+
+console.log(htmls.join(' '))
+
