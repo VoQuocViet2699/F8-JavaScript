@@ -51,3 +51,47 @@
 //  * map chỉnh sửa phàn tử trong mảng
 //  * reduce
 //callback
+// var SumChan = function(arr, callback) {
+//     var sum = 0;
+//     for (var i = 0; i < arr.length; i++) {
+//         if(arr[i] % 2 == 0) {
+//         sum += arr[i]
+//     }
+    
+// }
+// return callback(sum)
+// }
+// var array = [1,2,3,4,5,6,7,8,9]
+
+// var result = function(tong) {
+//     console.log(tong)
+// }
+
+// SumChan(array,result)
+// function arrToObj(arr) {
+//     return arr.reduce((obj, currentValue) => {
+//         obj[currentValue[0]] = currentValue[1];
+//         return obj;
+//     }, {});
+// }
+ 
+// // Expected results:
+// var arr = [
+//     ['name', 'Sơn Đặng'],
+//     ['age', 18],
+// ];
+// console.log(arrToObj(arr)); // { name: 'Sơn Đặng', age: 18 }
+
+
+
+function render(courses) {
+    var items = courses.map(function(item) {
+        return '<li>' + item + '</li>'
+    }).join('')
+    var ulElement = document.querySelector('.courses-list');
+    ulElement.innerHTML = items;
+    
+}
+var courses = ['HTML & CSS', 'Javascript', 'PHP', 'Java']
+render(courses)
+
